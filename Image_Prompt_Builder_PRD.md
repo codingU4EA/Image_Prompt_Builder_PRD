@@ -43,17 +43,29 @@ The following categories will be available for prompt construction:
 *   **Persistence:** These custom keywords will be saved for the duration of the user's session, allowing for reuse without re-typing.
 
 ### 3.4. Real-time Prompt Preview
-*   A dedicated text area will display the final, formatted prompt.
+*   A dedicated text area at the top of the application will display the final, formatted prompt, ensuring it is always visible.
 *   The preview will update in real-time as the user selects or deselects keywords.
 
 ### 3.5. Copy to Clipboard
 *   A "Copy" button will be associated with the prompt preview text area.
 *   On-click, the full prompt text is copied to the system clipboard.
 *   A temporary success notification (e.g., "Copied to clipboard!") will be displayed to confirm the action.
+*   **Clear All Button:** A "Clear All" button will be placed next to the "Copy" button. When clicked, it will reset the application to its initial state by clearing all selected keywords and removing any user-added custom keywords.
 
 ### 3.6. Inspiration & Discovery
-*   **Inspiration Library:** A pre-populated gallery of example prompts.
+*   **Inspiration Library:** A pre-populated gallery of example prompts, dynamically displayed in the sidebar.
 *   **"Surprise Me" Button:** A function to randomly generate a complete prompt from the available keywords.
+
+### 3.7. Prompt Expander
+*   **Automated Prompt Enrichment:** A "✨ Expand Prompt" button, located next to the "Generated Prompt" header, enriches a simple prompt with additional descriptive details.
+*   **Context-Aware Suggestions:** The feature analyzes the core subject of the prompt and intelligently adds relevant attributes related to setting, artistic style, composition, and lighting. The enriched prompt then replaces the previous content in the "Prompt Preview" text box.
+*   **User-Friendly Design:** The button has a distinct green-to-blue gradient background to make it easily identifiable.
+*   **Save Inspiration:** A "Save Inspiration" button allows users to save the currently generated prompt to the Inspiration Library. Saved prompts are persistent and will be available across application restarts.
+*   **Inspiration Management:** Users can manage their saved inspirations directly in the sidebar. Each inspiration tile will include:
+    *   A "Load" button to apply the prompt.
+    *   A text input to rename the inspiration.
+    *   A "❌" button to delete the inspiration.
+    *   All changes (creations, renames, deletions) are saved to a local `inspirations.json` file, ensuring they persist.
 
 ## 4. Technical Specifications
 
